@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scene 1 💖</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+  overflow:hidden;
+}
+
+h2{
+  text-align:center;
+}
+
+button{
+  padding:15px;
+  border:none;
+  border-radius:20px;
+  margin:10px;
+}
+
+#no{
+  position:absolute;
+  transition:0.1s;
+}
+
+.glow{
+  text-shadow:0 0 10px #ff4d6d;
+}
+</style>
+</head>
+
+<body>
+
+<div style="text-align:center">
+<h2 class="glow">Do you love me thangam? 💖</h2>
+
+<button onclick="yes()">Yes ❤️</button>
+<button id="no">No 💔</button>
+</div>
+
+<script>
+const no=document.getElementById("no");
+
+document.addEventListener("mousemove",()=>{
+  no.style.left=Math.random()*window.innerWidth+"px";
+  no.style.top=Math.random()*window.innerHeight+"px";
+});
+
+function yes(){
+  window.location.href="game2.html";
+}
+</script>
+
+</body>
+</html>
