@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scene 2 💖</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial;
+  background:#1e1b2e;
+  color:white;
+  overflow:hidden;
+}
+
+button{
+  padding:15px;
+  border:none;
+  border-radius:20px;
+  margin:10px;
+}
+
+#b1,#b2{
+  position:absolute;
+}
+
+.glow{
+  text-shadow:0 0 10px #ff4d6d;
+}
+</style>
+</head>
+
+<body>
+
+<h2 class="glow">amma kiyanna deyak thiyanawa 😏</h2>
+
+<button onclick="next()">kiyanna pana ❤️</button>
+<button id="b1">one na 💔</button>
+<button id="b2">one na 😏</button>
+
+<script>
+function move(btn){
+  btn.style.left=Math.random()*window.innerWidth+"px";
+  btn.style.top=Math.random()*window.innerHeight+"px";
+}
+
+setInterval(()=>{
+  move(document.getElementById("b1"));
+  move(document.getElementById("b2"));
+},200);
+
+function next(){
+  window.location.href="final.html";
+}
+</script>
+
+</body>
+</html>
